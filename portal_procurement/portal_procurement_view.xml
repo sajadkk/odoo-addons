@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record id="procurement_portal_view" model="ir.actions.act_window">
+            <field name="name">Procurement Order</field>
+            <field name="res_model">procurement.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="procurement.procurement_tree_view"/>
+            <field name="context">{"portal":'True'}</field>
+            <field name="search_view_id" ref="procurement.view_procurement_filter"/>
+            <field name="target">current</field>
+            <field name="help"  type="html">
+             <p class="oe_view_nocontent_create">
+                 Click to create a Procurement.
+              </p>
+              <p>
+                <b>Procurement Orders</b> represent the need for a certain quantity of products, at a given time, in a given location.
+              </p>
+            </field>
+        </record>
+
+        <record id="procurement_form_view" model="ir.ui.view">
+            <field name="name">procurement.order.form</field>
+            <field name="model">procurement.order</field>
+            <field name="inherit_id" ref="procurement.procurement_form_view"/>
+            <field name="arch" type="xml">
+                <button name="run" position="before" >
+                    <button name="button_confirm_request" states="draft" string="Confirm Request" class="oe_highlight" groups="stock.group_stock_manager,stock.group_stock_user" type="object"/>
+                </button>
+            </field>
+        </record>
+
+        <menuitem name="Procurements" id="portal_procurements" parent="portal.portal_menu" sequence="40"/>
+        <menuitem name="Orders" id="portal_procurements_order" parent="portal_procurements"
+            action="procurement_portal_view" sequence="10"/>
+
+    </data>
+</openerp>
