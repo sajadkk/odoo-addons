@@ -33,7 +33,7 @@
     "summary": "Mega attributes for E-Commerce",
     "description": """
     """,
-    "category": "E-Commerce",
+    "category": "eCommerce",
     "depends": ["website_sale"],
     "data": ['product_view.xml', 'views/assets.xml', 'views/templates.xml'],
     "installable": True
