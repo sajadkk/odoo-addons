@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <template id="authorize_acquirer_button">
+            <form t-if="acquirer" t-att-action="tx_url" method="post" target="_self">
+                <input type="hidden" name="x_version" t-att-value="tx_values['x_version']" />
+                <input type="hidden" name="x_login" t-att-value="tx_values['x_login']" />
+                <input type="hidden" name="x_show_form" t-att-value="tx_values['x_show_form']" />
+                <input type="hidden" name="x_invoice_num" t-att-value="tx_values['x_invoice_num']" />
+                <input type="hidden" name="x_amount" t-att-value="tx_values['x_amount']" />
+                <input type="hidden" name="x_currency_code" t-att-value="tx_values['x_currency_code']"/>
+                <input t-if="'x_duty' in tx_values" type="hidden" name="x_duty"
+                    t-att-value="tx_values.get('x_duty')"/>
+                <!-- partner / address data -->
+                <input type="hidden" name="x_address" t-att-value="tx_values['x_address']"/>
+                <input type="hidden" name="x_city" t-att-value="tx_values['x_city']"/>
+                <input type="hidden" name="x_country" t-att-value="tx_values['x_country']"/>
+                <input type="hidden" name="x_email" t-att-value="tx_values['x_email']"/>
+                <input type="hidden" name="x_phone" t-att-value="tx_values['x_phone']"/>
+                <input type="hidden" name="x_first_name" t-att-value="tx_values['x_first_name']"/>
+                <input type="hidden" name="x_last_name" t-att-value="tx_values['x_last_name']"/>
+                <input type="hidden" name="x_zip" t-att-value="tx_values['x_zip']"/>
+                <input type="hidden" name="x_relay_response" t-att-value="tx_values['x_relay_response']"/>
+                <input type="hidden" name="x_relay_url" t-att-value="tx_values['x_relay_url']"/>
+                <input type="hidden" name="x_fp_sequence" t-att-value="tx_values['x_invoice_num']"/>
+                <input type="hidden" name="x_fp_timestamp" t-att-value="tx_values['x_fp_timestamp']"/>
+                <input type="hidden" name="x_fp_hash" t-att-value="tx_values['x_fp_hash']"/>
+                <button type="submit" width="100px"
+                    t-att-class="submit_class">
+                    <img t-if="not submit_txt" src="/payment_authorize_net/static/src/img/authorize_net_icon.png"/>
+                    <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
+                </button>
+            </form>
+        </template>
+
+    </data>
+</openerp>
