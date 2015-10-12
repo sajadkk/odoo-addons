@@ -36,5 +36,5 @@
     "category": "eCommerce",
     "depends": ["website_sale"],
     "data": ['product_view.xml', 'views/assets.xml', 'views/templates.xml'],
-    "installable": True
+    "installable": False
 }
