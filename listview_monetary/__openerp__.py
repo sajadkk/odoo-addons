@@ -31,7 +31,7 @@ This module implements a monetary widget for tree view. The model should have a 
              <field name="amount_total" widget="monetary" />
 
 """,
-    'author': 'Sajad KK <kksajad@gmail.com>',
+    'author': 'Sajad KK',
     'depends': ['web'],
     'data': [],
     'js': ['static/src/js/view_list.js'],	

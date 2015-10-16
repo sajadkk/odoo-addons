@@ -32,7 +32,7 @@
     'summary': 'Manage procurement requests from portal',
     'version': '1.0',
     'description': """This module adds procurement menu and features to your portal.""",
-    'author': 'Sajad KK <kksajad@gmail.com>',
+    'author': 'Sajad KK',
     'depends': ['procurement', 'portal'],
     'data': [
         'portal_procurement_view.xml',
