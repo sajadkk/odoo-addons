@@ -19,16 +19,17 @@
 ##############################################################################
 {
     'name': 'Monetary widget for list view',
-    'version': '1.0.0',
+    'version': '1.5',
     'sequence': 150,
     'category': 'Web',
     'summary': 'Monetary widget for list view',
     'description': """
-This module implements a monetary widget for tree view. The model should have a currency field 'currency_id'.
-    eg. usage: 
-             <field name="currency_id" invisible="1" />
+=======================
 
-             <field name="amount_total" widget="monetary" />
+This module implements a monetary widget for tree view. The module expect a currency field 'currency_id' or specified
+as options="{'currency_field': 'custom_currency_id'}".
+
+    eg. usage: <field name="amount_total" widget="monetary" />
 
 """,
     'author': 'Sajad KK',
