@@ -29,7 +29,7 @@
 {
     "name": "Mega attributes",
     "version": "1.0",
-    "author": "Sajad KK <kksajad@gmail.com>",
+    "author": "Sajad KK",
     "summary": "Mega attributes for E-Commerce",
     "description": """
     """,

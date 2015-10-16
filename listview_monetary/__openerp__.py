@@ -21,7 +21,7 @@
     'name': 'Monetary widget for list view',
     'version': '1.5',
     'sequence': 150,
-    'category': 'Web, Extra Tools',
+    'category': 'Web',
     'summary': 'Monetary widget for list view',
     'description': """
 =======================
@@ -32,7 +32,7 @@ as options="{'currency_field': 'custom_currency_id'}".
     eg. usage: <field name="amount_total" widget="monetary" />
 
 """,
-    'author': 'Sajad KK <kksajad@gmail.com>',
+    'author': 'Sajad KK',
     'depends': ['web'],
     'data': ['views/templates.xml'],
     'installable': True,

@@ -32,7 +32,7 @@
     'summary': 'Payment Acquirer: Authorize.net Implementation',
     'version': '1.0',
     'description': """Authorize.net Payment Acquirer""",
-    'author': 'Sajad KK <kksajad@gmail.com>',
+    'author': 'Sajad KK',
     'depends': ['payment'],
     'data': [
         'views/authorize.xml',
